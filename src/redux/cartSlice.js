@@ -9,9 +9,12 @@ const cartSlice = createSlice({
         },
         deleteCart:(state,action)=>{
             return state.filter(product=>product.id!=action.payload)
+        },
+        emptyCart:(state)=>{
+           return state = []
         }
     }
 })
 
-export const {addToCart,deleteCart} = cartSlice.actions
+export const {addToCart,deleteCart,emptyCart} = cartSlice.actions
 export default cartSlice.reducer
